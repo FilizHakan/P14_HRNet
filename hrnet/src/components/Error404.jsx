@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import Logo from "../assets/black-shadow-logo.png";
+import Logo from "../assets/HRNetWholeLogo.png";
 
 /**
  * @name Error404
@@ -11,25 +11,28 @@ import Logo from "../assets/black-shadow-logo.png";
 export default function Error404() 
 {
   return (
-    <div>
-        <div className="error404">
-          <p className="title404">404</p>
+      <div>
+        <p className="errorTitle">404</p>
+
+        <p 
+          className="errorContent"
+        >
+          Oops! The page you have requested does not exist.
+        </p>
+
+        <div className="logo404">
           <img
             src={Logo}
-            className="logo404"
+            className="homeIcon"
             alt="HRNet Logo"
           />
-          <p 
-            className="text404"
-          >
-            Oops! The page you have requested does not exist.
-          </p>
-          <NavLink 
-            to={"/"} 
-            className="navigation404">
-              Return to the home page
-          </NavLink>
         </div>
-      </div>
-  )
+
+        <NavLink 
+          to={"/"} 
+          className="errorLink">
+            Return to the home page
+        </NavLink>
+      </div>  
+          )
 };

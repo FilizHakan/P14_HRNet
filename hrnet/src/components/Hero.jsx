@@ -1,27 +1,33 @@
 import React from "react";
 
-import Logo from "../assets/black-logo.png";
-
+import Logo from "../assets/HRNetBlueLogo.png";
+import Sphere from "../assets/grey-sphere.png"
 /**
  * @description Home is the creation of the main home page
  * @returns {JSX.Element} Home page
  */
-export default function Home () 
+export default function Hero () 
 {
     return (
       <div>
-        <div className="homeTitleContainer">
-          <h1 className="homeTitle">Welcome to</h1>
+        <div className="heroTitleContainer">
+          <h1 className="heroTitle">Welcome to</h1>
         </div>
-        <img 
-            src={Logo} 
-            className="homeIcon" 
-            alt="SportSee Icon"
-          >
-        </img>
-        <p className="homeSubtitle">The company's internal application to create and view employees records</p>
-        <div className="iconSportSee">
+        <div className="hrnetlogo">
+          <img 
+              src={Logo} 
+              className="hrIcon" 
+              alt="HRNet Logo"
+            >
+          </img>
+          <img 
+              src={Sphere} 
+              className="sphereIcon" 
+              alt="A sphere Logo"
+            >
+          </img>
         </div>
+        <p className="heroSubtitle">The company's internal application to create and view employees records</p>
       </div>
   );
 };

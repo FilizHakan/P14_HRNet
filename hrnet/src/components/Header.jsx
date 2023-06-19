@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Logo from "../assets/white-logo.png";
+import Logo from "../assets/HRNET.png";
 /**
  * @name Header
  * @description create the header component with the logo and link of navigation
@@ -12,23 +12,34 @@ import Logo from "../assets/white-logo.png";
 export default function Header () 
 {
 
-  return (
-    <div>
-        <nav className="main-nav">
-            <div>
-                <img
-                    src={Logo}
-                    className="nav-logo"
-                    alt="HRNet Logo"
-                />
+    return (
+    <div className="home">
+        <div className="home-logo">
+            <img
+                src={Logo}
+                className="nav-logo"
+                alt="HRNet Logo"
+            />
+
+            <div className="linkNav">
+                <nav className="homeEmployeeLinkNav">
+                    <Link 
+                        title="Home" 
+                        className="navBtn" 
+                        to="/"
+                    >
+                        Home
+                    </Link>
+                    <Link 
+                        title="Create Employee Form" 
+                        className="navBtn" 
+                        to="/employee-create-form"
+                    >
+                        Create
+                    </Link>
+                </nav>
             </div>
-            <div>
-            <Link className="main-nav-item-sign" to="/employee-create-form">
-                <i className="fa fa-user-circle"></i>
-                Sign In
-            </Link>
-            </div>
-        </nav>
+        </div>
     </div>
   );
 };

@@ -15,7 +15,7 @@ export default function Footer ()
         <span className="footerTitle">
             HRNet
         </span>
-        2023@Copyright
+          2023@Copyright
       </p>
     </div>
   );

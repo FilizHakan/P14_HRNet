@@ -1,13 +1,415 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  height: 100%;
 }
+
+@media (max-width: 920px) {
+  html {
+    min-height: 100%;
+  }
+}
+
+body {
+  background-color: #FFFAEE;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+:global(body div#root) {
+  height: 100%;
+}
+
+h2 {
+  color: #030720;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/****** HEADER ******/
+.home {
+  background-color: #fbfbfb;
+  margin-top: 20px;
+
+}
+
+.home-logo {
+  background-color: #272727;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.homeEmployeeLinkNav {
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+}
+
+.navBtn {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  color: #000000;
+  background-color: white;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+.navBtn:hover {
+  transition-duration: 0.4s;
+  border: 2px solid #8CCDB0;
+  color: #272727;
+  border-radius: 5px;
+  box-shadow: inset 5em 2.1em #8CCDB0;
+}
+
+.nav-logo {
+  height: 350px;
+  padding-right: 25px;
+  margin-top: -100px;
+  margin-bottom: -140px;
+}
+
+/****** HERO ******/
+.homeIcon {
+  height: 500px;
+  align-content: center;
+}
+
+.heroTitleContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.heroTitle {
+  font-size: 6rem;
+  color: black;
+}
+
+.heroSubtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: black;
+  margin-top: 35px;
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+
+.hrIcon {
+  height: 65vh;
+  transition: 0.4s;
+  position: absolute;
+  z-index: 30;
+}
+
+.sphereIcon {
+  height: 50vh;
+  transition: 0.4s;
+  position: absolute;
+  z-index: -10;
+}
+
+.hrnetlogo {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/****** FORM ******/
+.formContainer {
+  min-height: 73%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 40px 30px 40px;
+}
+
+form {
+  background-color: #FFFAEE;
+  width: 28%;
+  padding: 30px;
+}
+
+@media (max-width: 920px) {
+  form {
+    width: 100%;
+  }
+}
+
+form label {
+  display: block;
+  color: #59738D;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  border: 4px solid #59738D;
+  border-radius: 5px;
+  padding: 0.4%;
+  margin-bottom: 15px;
+}
+
+form label > span {
+  margin-top: -8px;
+  margin-bottom: 3px;
+  display: block;
+  background-color: #FFFAEE;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0px 4px;
+}
+
+form label input type,
+form label input type {
+  color: #59738D;
+} 
+
+form input,
+form select {
+  cursor: pointer;
+  color: #59738D;
+  background-color: #FFFAEE;
+  border: 4px solid #FFFAEE;
+  width: 98%;
+  padding: 0px !important;
+}
+
+#numberOne,
+#numberTwo {
+  height: 30px;
+}
+
+.active-page-number {
+  transform: scale(1.5);
+  transition: transform 1s ease-out;
+}
+
+.inactive-page-number {
+  transform: scale(1);
+  transition: transform 1s ease-out;
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonIndex {
+  background-color: #272727;
+  color: #FFFAEE;
+  width: 100%;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+}
+
+.address {
+  margin-top: 10px;
+}
+
+fieldset {
+  border: none;
+  padding: 0px;
+}
+
+legend {
+  display: none;
+}
+
+.tableSize {
+  width: 100%;
+}
+
+.error {
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.submitButton {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  color: #272727;
+  background-color: #FFFAEE;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 2px solid #272727;
+  margin: 10px;
+}
+
+.submitButton:hover {
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border: 2px solid #8CCDB0;
+  color: #272727;
+  border-radius: 5px;
+  box-shadow: inset 5em 2.1em #8CCDB0;
+}
+
+/****** FOOTER ******/
+.footerContainer {
+  background-color: #272727;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  margin: 70px;
+  color: white;
+}
+
+/****** ERROR404 ******/
+.errorTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 248px;
+  font-weight: 750;
+  margin: 0;
+  color: #8CCDB0;
+  transition: 0.4s;
+}
+
+
+.errorLink {
+  margin: 0;
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  color: #59738D;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.errorContent {
+  display: flex;
+  width: 100%;
+  color: black;
+  font-size: 32px;
+  font-weight: 500;
+  justify-content: center;
+  transition: 0.4s;
+  color: #59738D;
+}
+
+.logo404 {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeIcon {
+  margin-top: -60px;
+  margin-bottom: -30px;
+  height: 60vh;
+  transition: 0.4s;
+}
+
+@media only screen and (max-width: 2560px) {
+  .errorContainer {
+      margin: 1% auto;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .errorContent {
+      text-align: center;
+  }
+}
+
+@media only screen and (max-width: 819px) {
+  .errorContainer {
+      margin: 5% auto;
+  }
+
+  .errorTitle {
+      font-size: 206px;
+  }
+
+  .errorLink{
+      font-size: 14px;
+  }
+
+  .errorContent {
+      font-size: 18px;
+  }
+
+}
+
+@media only screen and (max-width: 426px) {
+  .errorContainer {
+      margin: 20% auto;
+  }
+  .errorTitle {
+      font-size: 150px;
+  }
+
+  .homeIcon {
+    height: 50vh;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .errorContainer {
+      margin: 13% auto;
+  }
+
+  .homeIcon {
+    height: 43vh;
+
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .errorContainer {
+      margin: 10% auto;
+  }
+  .errorTitle {
+      font-size: 90px;
+  }
+
+  .homeIcon {
+    height: 35vh;
+
+  }
+}
+
