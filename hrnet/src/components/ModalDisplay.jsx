@@ -1,12 +1,12 @@
-/*import React from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 
 import store from "../redux/store";
 import { employeeCreatedAction } from "../redux/employeeCreated";
 import { EmployeeCreatedSelector } from "../redux/selector";
 
-//import Modal from "HRNet_universal_modal/dist/Modal";
-//import "HRNet_universal_modal/dist/Modal.css";
+import Modal from "HRNet_universal_modal/dist/Modal";
+import "HRNet_universal_modal/dist/Modal.css";
 
 /**
  * @name ShowModal
@@ -14,7 +14,7 @@ import { EmployeeCreatedSelector } from "../redux/selector";
  * @returns {JSX.Element}
  */
 
-/*export default function ModalDisplay(isVisible) 
+export default function ModalDisplay(isVisible) 
 {
 
   function hideModal() 
@@ -35,4 +35,4 @@ import { EmployeeCreatedSelector } from "../redux/selector";
       </p>
     </Modal>
   )
-}*/
+}

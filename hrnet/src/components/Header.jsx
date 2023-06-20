@@ -37,6 +37,13 @@ export default function Header ()
                     >
                         Create
                     </Link>
+                    <Link 
+                        title="Create Employee Form" 
+                        className="navBtn" 
+                        to="/employee-list"
+                    >
+                        View
+                    </Link>
                 </nav>
             </div>
         </div>

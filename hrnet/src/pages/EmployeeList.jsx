@@ -1,14 +1,14 @@
 import React from "react";
-//import { useSelector } from "react-redux";
-//import { formDataSelector } from "../redux/selector";
+import { useSelector } from "react-redux";
+import { formDataSelector } from "../redux/selector";
 import { Link } from "react-router-dom";
 
-//import moment from "moment";
+import moment from "moment";
 
-//import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid } from "@mui/x-data-grid";
 
-//import escapeRegExp from "../utils/tableData/escapeRegExp";
-//import QuickSearchToolbar from "../utils/tableData/QuickSearch";
+import escapeRegExp from "../utils/tableData/escapeRegExp";
+import QuickSearchToolbar from "../utils/tableData/QuickSearch";
 import Header from "../components/Header";
 import Loader from "../pages/Loader";
 
@@ -20,11 +20,12 @@ import numberTwoDot from "../assets/numberTwoDot.png";
  * @description create the page for the table caontaining the list of employees
  * @returns {JSX.Element}
  */
-export default function List() 
+export default function EmployeeList() 
 {
-  /*const employeeInfo = useSelector(formDataSelector);
+  const employeeInfo = useSelector(formDataSelector);
   const rows = [];
   const rowsLength = employeeInfo.rows.length;
+  console.log(employeeInfo)
   
 
   // Which information will be filled up, regarding each row and column in the table
@@ -112,7 +113,7 @@ export default function List()
     {
       setGridRows(gridRows)
     }, [gridRows]);
-    */
+    
 
     return (
       <div>
@@ -139,11 +140,7 @@ export default function List()
                 </img>
             </Link>
         </div>
-      </div>
-    )
-};
-
-        /*<div id="table" className="tableContainer">
+        <div id="table" className="tableContainer">
           <DataGrid
             className="tableSize"
             columns={gridColumns}
@@ -154,8 +151,13 @@ export default function List()
               {
                 value: search,
                 onChange: (event) => searchingRequest(event.target.value),
-                clearSearch: () => searchingRequest(""),
+                clearSearch: () => searchingRequest(" "),
               }
             }}
           />
-        </div>*/
+        </div>
+      </div>
+    )
+};
+
+        

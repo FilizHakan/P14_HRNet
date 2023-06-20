@@ -52,7 +52,7 @@ export default function Form ()
     }, []);
 
     // Set the initial state
-    const [formData, setFormData] = useState ({
+    const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
         birth: "",
@@ -79,184 +79,174 @@ export default function Form ()
     const onSubmit = (el) => 
     {
     el.preventDefault();
-    store.dispatch (
-      formDataAction ({
-        firstName: setFormData.firstName,
-        lastName: setFormData.lastName,
-        birth: setFormData.birth,
-        startDate: setFormData.startDate,
-        street: setFormData.street,
-        city: setFormData.city,
-        state: setFormData.state,
-        zipCode: setFormData.zipCode,
-        department: setFormData.department,
-      })
-    )
-    store.dispatch(employeeCreatedAction(true))
+    store.dispatch(formDataAction(formData));
+    store.dispatch(employeeCreatedAction(true));
     };
 
     return (
         <div>
             <Loader />
             <Header />
+            
+            <div className="form">
 
-            <h2>Create Employee</h2>
+                <h2>Create Employee</h2>
 
-            <div className="linkContainer"> 
-                <Link to="/employee-create-form">
-                    <img 
-                        id="numberOne" 
-                        className="active-page-number"
-                        alt="Page number" 
-                        src={numberOneDot}
+                <div className="linkContainer"> 
+                    <Link to="/employee-create-form">
+                        <img 
+                            id="numberOne" 
+                            className="active-page-number"
+                            alt="Page number" 
+                            src={numberOneDot}
+                        >
+                        </img>
+                    </Link>
+                    <Link to="/employee-list">
+                        <img 
+                            id="numberTwo" 
+                            className="inactive-page-number"
+                            alt="Page number" 
+                            src={numberTwoDot}
+                        >
+                        </img>
+                    </Link>
+                </div>
+
+                <div className="formContainer">
+                    <form 
+                        action="#" 
+                        id="create-employee" 
+                        onSubmit={onSubmit}
                     >
-                    </img>
-                </Link>
-                <Link to="/employee-list">
-                    <img 
-                        id="numberTwo" 
-                        className="inactive-page-number"
-                        alt="Page number" 
-                        src={numberTwoDot}
-                    >
-                    </img>
-                </Link>
-            </div>
-
-            <div className="formContainer">
-                <form 
-                    action="#" 
-                    id="create-employee" 
-                    onSubmit={onSubmit}
-                >
-                    <label htmlFor="first-name">
-                        <span>First Name</span>
-                        <input 
-                            autoComplete="off"
-                            type="text" 
-                            id="first-name" 
-                            name="firstName" 
-                            onChange={onChange} 
-                            value={formData.firstName} 
-                            required
-                        />
-                    </label>
-
-                    <label htmlFor="last-name">
-                        <span>Last Name</span>
-                        <input 
-                            autoComplete="off"
-                            type="text" 
-                            id="last-name" 
-                            name="lastName" 
-                            onChange={onChange} 
-                            value={formData.lastName} 
-                            required
-                        />
-                    </label>
-
-                    <label htmlFor="date-of-birth">
-                        <span>Date of Birth</span>
-                        <input 
-                            autoComplete="off"
-                            type="date" 
-                            id="date-of-birth" 
-                            name="birth" 
-                            onChange={onChange} 
-                            value={formData.birth} 
-                            required
-                        />
-                    </label>
-
-                    <label htmlFor="start-date">
-                        <span>Start Date</span>
-                        <input 
-                            autoComplete="off"
-                            type="date" 
-                            id="start-date" 
-                            name="startDate" 
-                            onChange={onChange} 
-                            value={formData.startDate} 
-                            required 
-                        />
-                    </label>
-
-                    <fieldset className="fieldset">
-                        <legend>Address</legend>
-
-                        <label htmlFor="street">
-                            <span>Street</span>
+                        <label htmlFor="first-name">
+                            <span>First Name</span>
                             <input 
-                                autoComplete="on"
-                                id="street" 
+                                autoComplete="off"
                                 type="text" 
-                                name="street" 
+                                id="first-name" 
+                                name="firstName" 
                                 onChange={onChange} 
-                                value={formData.street} 
+                                value={formData.firstName} 
+                                required
+                            />
+                        </label>
+
+                        <label htmlFor="last-name">
+                            <span>Last Name</span>
+                            <input 
+                                autoComplete="off"
+                                type="text" 
+                                id="last-name" 
+                                name="lastName" 
+                                onChange={onChange} 
+                                value={formData.lastName} 
+                                required
+                            />
+                        </label>
+
+                        <label htmlFor="date-of-birth">
+                            <span>Date of Birth</span>
+                            <input 
+                                autoComplete="off"
+                                type="date" 
+                                id="date-of-birth" 
+                                name="birth" 
+                                onChange={onChange} 
+                                value={formData.birth} 
+                                required
+                            />
+                        </label>
+
+                        <label htmlFor="start-date">
+                            <span>Start Date</span>
+                            <input 
+                                autoComplete="off"
+                                type="date" 
+                                id="start-date" 
+                                name="startDate" 
+                                onChange={onChange} 
+                                value={formData.startDate} 
                                 required 
                             />
                         </label>
 
-                        <label htmlFor="city">
-                            <span>City</span>
-                            <input 
-                                autoComplete="on"
-                                id="city" 
-                                type="text" 
-                                name="city" 
-                                onChange={onChange} 
-                                value={formData.city} 
-                                required 
-                            />
-                        </label>
+                        <fieldset className="fieldset">
+                            <legend>Address</legend>
 
-                        <label htmlFor="state">
-                            <span>State</span>
+                            <label htmlFor="street">
+                                <span>Street</span>
+                                <input 
+                                    autoComplete="on"
+                                    id="street" 
+                                    type="text" 
+                                    name="street" 
+                                    onChange={onChange} 
+                                    value={formData.street} 
+                                    required 
+                                />
+                            </label>
+
+                            <label htmlFor="city">
+                                <span>City</span>
+                                <input 
+                                    autoComplete="on"
+                                    id="city" 
+                                    type="text" 
+                                    name="city" 
+                                    onChange={onChange} 
+                                    value={formData.city} 
+                                    required 
+                                />
+                            </label>
+
+                            <label htmlFor="state">
+                                <span>State</span>
+                                <select 
+                                    name="state" 
+                                    id="state" 
+                                    onChange={onChange} 
+                                    value={formData.state} 
+                                    required
+                                >
+                                    <option>Choose a State</option>
+                                </select>
+                            </label>
+
+                            <label htmlFor="zip-code">
+                                <span>Zip Code</span>
+                                <input 
+                                    id="zip-code" 
+                                    type="number" 
+                                    name="zipCode" 
+                                    onChange={onChange} 
+                                    value={formData.zipCode} 
+                                    required
+                                />
+                            </label>
+                        </fieldset>
+
+                        <label htmlFor="department">
+                            <span>Department</span>
                             <select 
-                                name="state" 
-                                id="state" 
+                                name="department" 
+                                id="department" 
                                 onChange={onChange} 
-                                value={formData.state} 
+                                value={formData.department} 
                                 required
                             >
-                                <option>Choose a State</option>
+                                <option>Choose a department</option>
                             </select>
                         </label>
-
-                        <label htmlFor="zip-code">
-                            <span>Zip Code</span>
-                            <input 
-                                id="zip-code" 
-                                type="number" 
-                                name="zipCode" 
-                                onChange={onChange} 
-                                value={formData.zipCode} 
-                                required
-                            />
-                        </label>
-                    </fieldset>
-
-                    <label htmlFor="department">
-                        <span>Department</span>
-                        <select 
-                            name="department" 
-                            id="department" 
-                            onChange={onChange} 
-                            value={formData.department} 
-                            required
+                        <button 
+                            type="submit" 
+                            className="submitButton"
                         >
-                            <option>Choose a department</option>
-                        </select>
-                    </label>
-                    <button 
-                        type="submit" 
-                        className="submitButton"
-                    >
-                        Save
-                    </button>
-                </form>
+                            Save
+                        </button>
+                    </form>
+                </div>
             </div>
-
         <Footer />
     </div>
     )
