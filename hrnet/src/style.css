@@ -74,10 +74,10 @@ h2 {
 
 .navBtn:hover {
   transition-duration: 0.4s;
-  border: 2px solid #8CCDB0;
-  color: #272727;
+  border: 2px solid #038d4f;
+  color: #FFFAEE;
   border-radius: 5px;
-  box-shadow: inset 5em 2.1em #8CCDB0;
+  box-shadow: inset 5em 2.1em #038d4f;
 }
 
 .nav-logo {
@@ -286,21 +286,21 @@ legend {
   width: 100px;
   height: 40px;
   line-height: 40px;
-  color: #1a548e;
+  color: #038d4f;
   background-color: #FFFAEE;
   padding: 0 10px;
   border-radius: 5px;
-  border: 2px solid #1a548e;
+  border: 2px solid #038d4f;
   margin: 10px;
 }
 
 .submitButton:hover {
   cursor: pointer;
   transition-duration: 0.4s;
-  border: 2px solid #8CCDB0;
+  border: 2px solid #038d4f;
   color: #FFFAEE;
   border-radius: 5px;
-  box-shadow: inset 5em 2.1em #8CCDB0;
+  box-shadow: inset 5em 2.1em #038d4f;
 }
 
 /****** FOOTER ******/
@@ -361,10 +361,10 @@ legend {
   align-items: center;
 }
 
-.homeIcon {
-  margin-top: -60px;
+.errorIcon {
+  margin-top: -30px;
   margin-bottom: -30px;
-  height: 60vh;
+  height: 50vh;
   transition: 0.4s;
 }
 
@@ -397,6 +397,10 @@ legend {
       font-size: 18px;
   }
 
+  .errorIcon {
+    height: 35vh;
+  }
+
 }
 
 @media only screen and (max-width: 426px) {
@@ -407,8 +411,8 @@ legend {
       font-size: 150px;
   }
 
-  .homeIcon {
-    height: 50vh;
+  .errorIcon {
+    height: 20vh;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -419,9 +423,8 @@ legend {
       margin: 13% auto;
   }
 
-  .homeIcon {
-    height: 43vh;
-
+  .errorIcon {
+    height: 16vh;
   }
 }
 
@@ -433,8 +436,8 @@ legend {
       font-size: 90px;
   }
 
-  .homeIcon {
-    height: 35vh;
+  .errorIcon {
+    height: 13vh;
 
   }
 }
@@ -462,8 +465,7 @@ legend {
   color: #1a548e;
 }
 
-.css-t89xny-MuiDataGrid-columnHeaderTitle,
-.css-1w53k9d-MuiDataGrid-overlay {
+.css-t89xny-MuiDataGrid-columnHeaderTitle {
   text-transform: upperCase;
 }
 
@@ -477,5 +479,91 @@ legend {
   color: #1a548e;
 }
 
+.css-1x1olcu-MuiDataGrid-root .MuiDataGrid-withBorderColor {
+  border-bottom: #FFFAEE;
+  border-top: #FFFAEE;
+}
 
+.customOverlay {
+  color: #1a548e;
+  z-index: 3000;
+}
+
+.css-1akuw9y-MuiDataGrid-overlayWrapperInner {
+  background-image: url(./assets/HRNetBlueLogoSphere.png);
+  background-repeat: no-repeat;
+  display: flex;
+  background-size: 15vh;
+  background-position: center 15%;
+}
+
+/*** Loader ***/
+
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: loaderOpacity 1s forwards;
+          animation: loaderOpacity 1s forwards;
+}
+
+.loader {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #038d4f transparent #555 transparent;
+  border-radius: 50%;
+  -webkit-animation: loader 0.5s linear infinite;
+          animation: loader 0.5s linear infinite;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loaderOpacity {
+  30% {
+      opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes loaderOpacity {
+  30% {
+      opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+} 
 

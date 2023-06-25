@@ -20,19 +20,19 @@ export default function Error404()
           Oops! The page you have requested does not exist.
         </p>
 
-        <div className="logo404">
-          <img
-            src={Logo}
-            className="homeIcon"
-            alt="HRNet Logo"
-          />
-        </div>
-
         <NavLink 
           to={"/"} 
           className="errorLink">
             Return to the home page
         </NavLink>
+
+        <div className="logo404">
+          <img
+            src={Logo}
+            className="errorIcon"
+            alt="HRNet Logo"
+          />
+        </div>
       </div>  
           )
 };

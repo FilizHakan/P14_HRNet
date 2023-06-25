@@ -5,10 +5,9 @@ import { formDataSelector } from "../redux/selector";
 import moment from "moment";
 
 import { DataGrid } from "@mui/x-data-grid";
-import Box from "@mui/material/Box";
 
 import escapeRegExp from "../utils/tableData/escapeRegExp";
-import QuickSearchToolbar from "../utils/tableData/QuickSearch";
+import SearchToolbar from "../utils/tableData/SearchToolbar";
 import Header from "../components/Header";
 import Loader from "./Loader";
 import Footer from "../components/Footer";
@@ -122,7 +121,9 @@ export default function Table()
             className="tableSize"
             columns={gridColumns}
             rows={gridRows}
-            slots={{ toolbar: QuickSearchToolbar }}
+            slots={{ 
+              toolbar: SearchToolbar,
+            }}
             slotProps={{ 
               toolbar: 
               {

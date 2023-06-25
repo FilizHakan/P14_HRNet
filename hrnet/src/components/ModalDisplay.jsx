@@ -10,29 +10,29 @@ import "HRNet_universal_modal/dist/Modal.css";
 
 /**
  * @name ShowModal
- * @description create modal component by using the "modal-openc-library"
+ * @description create modal component by using the "HRNet_universal_modal" react component
  * @returns {JSX.Element}
  */
 
 export default function ModalDisplay(isVisible) 
 {
 
-  function hideModal() 
+  function hideBigModal() 
   {
     store.dispatch(employeeCreatedAction(false));
   }
-  const showText = useSelector(EmployeeCreatedSelector).data;
+  const isBigModalVisible = useSelector(EmployeeCreatedSelector).data;
 
   return (
-    <Modal 
-      isVisible={showText} 
-      hide={hideModal} 
+    <Modal
+      isVisible={isBigModalVisible} 
+      hide={hideBigModal} 
       title="New employee" 
-      size="small"
+      size="big"
     >
-      <p>
+      <div className="modalBody">
         You have successfully created your new employee's record.
-      </p>
+      </div>
     </Modal>
   )
 }

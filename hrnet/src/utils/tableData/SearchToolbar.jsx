@@ -9,7 +9,7 @@ import TextField from "@mui/material/TextField";
  * @description Create the search bar on the top of the table
  * @returns {JSX.Element}
  */
-export default function QuickSearchToolbar (props) 
+export default function SearchToolbar (props) 
 {
     return (
       <Box

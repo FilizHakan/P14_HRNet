@@ -17,9 +17,6 @@ import Header from "../components/Header";
 import Loader from "./Loader";
 import Footer from "../components/Footer";
 
-import numberOneDot from "../assets/numberOneDot.png";
-import numberTwoDot from "../assets/numberTwoDot.png";
-
 /**
  * @name Form
  * @description create the form to generate the employee record
@@ -95,7 +92,7 @@ export default function Form ()
                         onSubmit={onSubmit}
                     >
                         <h2>Create Employee</h2>
-                        
+
                         <label htmlFor="first-name">
                             <span>First Name</span>
                             <input 
