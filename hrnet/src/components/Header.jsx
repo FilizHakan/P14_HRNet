@@ -40,7 +40,7 @@ export default function Header ()
                     <Link 
                         title="Create Employee Form" 
                         className="navBtn" 
-                        to="/employee-list"
+                        to="/employee-list-table"
                     >
                         View
                     </Link>

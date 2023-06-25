@@ -88,16 +88,14 @@ export default function Form ()
             <Loader />
             <Header />
             
-            <div className="form">
-
-                <h2>Create Employee</h2>
-
                 <div className="formContainer">
                     <form 
                         action="#" 
                         id="create-employee" 
                         onSubmit={onSubmit}
                     >
+                        <h2>Create Employee</h2>
+                        
                         <label htmlFor="first-name">
                             <span>First Name</span>
                             <input 
@@ -225,8 +223,7 @@ export default function Form ()
                         </button>
                     </form>
                 </div>
-            </div>
-        <Footer />
-    </div>
+            <Footer />
+        </div>
     )
 };

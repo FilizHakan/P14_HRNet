@@ -34,18 +34,34 @@ export default function QuickSearchToolbar (props)
           sx={{
             width: 
             {
-              xs: 1,
+              xs: 1.5,
               sm: "auto"
             },
-            m: (theme) => theme.spacing(1, 0.75, 1.5),
+            m: (theme) => theme.spacing(1.5),
             "& .MuiSvgIcon-root": 
             {
-              mr: 0.5
+              mr: 1
+            },
+            "& .MuiInput-underline": 
+            {
+              borderBottom: 1,
+              borderColor: "#1a548e"
+              
             },
             "& .MuiInput-underline:before": 
             {
-              borderBottom: 1.5,
-              borderColor: "divider"
+              borderBottom: 1,
+              borderColor: "#1a548e"
+            },
+            "& .MuiInput-underline:after": 
+            {
+              borderBottom: 1,
+              borderColor: "#1a548e"
+            },
+            "& .MuiInput-underline:hover": 
+            {
+              borderBottom: 1,
+              borderColor: "#1a548e"
             }
           }}
         />

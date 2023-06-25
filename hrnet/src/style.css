@@ -201,7 +201,10 @@ h2 {
 form {
   background-color: #FFFAEE;
   width: 28%;
-  padding: 30px;
+  padding: 5px 50px 30px 50px;
+  margin: 50px 0;
+  box-shadow: 0 0 28px #1a548e;
+  border-radius: 15px;
 }
 
 @media (max-width: 920px) {
@@ -212,13 +215,13 @@ form {
 
 form label {
   display: block;
-  color: #59738D;
+  color: #1a548e;
   width: 100%;
   text-transform: uppercase;
   font-size: 0.7rem;
-  border: 4px solid #59738D;
+  border: 3px solid #1a548e;
   border-radius: 5px;
-  padding: 0.4%;
+  padding: .7%;
   margin-bottom: 15px;
 }
 
@@ -235,13 +238,13 @@ form label > span {
 
 form label input type,
 form label input type {
-  color: #59738D;
+  color: #1a548e;
 } 
 
 form input,
 form select {
   cursor: pointer;
-  color: #59738D;
+  color: #1a548e;
   background-color: #FFFAEE;
   border: 4px solid #FFFAEE;
   width: 98%;
@@ -283,11 +286,11 @@ legend {
   width: 100px;
   height: 40px;
   line-height: 40px;
-  color: #272727;
+  color: #1a548e;
   background-color: #FFFAEE;
   padding: 0 10px;
   border-radius: 5px;
-  border: 2px solid #272727;
+  border: 2px solid #1a548e;
   margin: 10px;
 }
 
@@ -295,7 +298,7 @@ legend {
   cursor: pointer;
   transition-duration: 0.4s;
   border: 2px solid #8CCDB0;
-  color: #272727;
+  color: #FFFAEE;
   border-radius: 5px;
   box-shadow: inset 5em 2.1em #8CCDB0;
 }
@@ -450,8 +453,28 @@ legend {
   width: 100%;
 }
 
+.MuiTablePagination-selectLabel,
+.css-16c50h-MuiInputBase-root-MuiTablePagination-select,
+.css-t89xny-MuiDataGrid-columnHeaderTitle,
+.css-1w53k9d-MuiDataGrid-overlay,
+.css-v4u5dn-MuiInputBase-root-MuiInput-root,
+.MuiSvgIcon-root {
+  color: #1a548e;
+}
+
+.css-t89xny-MuiDataGrid-columnHeaderTitle,
+.css-1w53k9d-MuiDataGrid-overlay {
+  text-transform: upperCase;
+}
+
 .MuiDataGrid-main {
   height: 400px;
+}
+
+.css-194a1fa-MuiSelect-select-MuiInputBase-input.MuiSelect-select,
+.css-levciy-MuiTablePagination-displayedRows,
+.css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+  color: #1a548e;
 }
 
 

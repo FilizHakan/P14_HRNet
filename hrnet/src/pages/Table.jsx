@@ -5,11 +5,12 @@ import { formDataSelector } from "../redux/selector";
 import moment from "moment";
 
 import { DataGrid } from "@mui/x-data-grid";
+import Box from "@mui/material/Box";
 
 import escapeRegExp from "../utils/tableData/escapeRegExp";
 import QuickSearchToolbar from "../utils/tableData/QuickSearch";
 import Header from "../components/Header";
-import Loader from "../pages/Loader";
+import Loader from "./Loader";
 import Footer from "../components/Footer";
 
 /**
@@ -17,7 +18,7 @@ import Footer from "../components/Footer";
  * @description create the page for the table caontaining the list of employees
  * @returns {JSX.Element}
  */
-export default function EmployeeList() 
+export default function Table() 
 {
   const employeeInfo = useSelector(formDataSelector);
   const rows = [];
@@ -117,6 +118,7 @@ export default function EmployeeList()
         <h2>Current Employees</h2>
         <div id="table" className="tableContainer">
           <DataGrid
+            sx={{ borderColor: '#FFFAEE', borderRadius: '15px', boxShadow: '0 0 28px #1a548e' }}
             className="tableSize"
             columns={gridColumns}
             rows={gridRows}
