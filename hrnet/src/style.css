@@ -38,7 +38,7 @@ h2 {
 .home {
   background-color: #fbfbfb;
   margin-top: 20px;
-
+  width: 100%;
 }
 
 .home-logo {
@@ -82,7 +82,6 @@ h2 {
 
 .nav-logo {
   height: 350px;
-  padding-right: 25px;
   margin-top: -100px;
   margin-bottom: -140px;
 }
@@ -91,6 +90,7 @@ h2 {
 .homeIcon {
   height: 500px;
   align-content: center;
+  transition: 0.4s;
 }
 
 .heroTitleContainer {
@@ -99,11 +99,13 @@ h2 {
   width: 100%;
   align-items: center;
   justify-content: flex-end;
+  transition: 0.4s;
 }
 
 .heroTitle {
   font-size: 6rem;
   color: black;
+  transition: 0.4s;
 }
 
 .heroSubtitle {
@@ -116,6 +118,7 @@ h2 {
   margin-top: 35px;
   margin-bottom: 60px;
   font-weight: bold;
+  justify-content: center;
 }
 
 .hrIcon {
@@ -137,6 +140,52 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.4s;
+}
+
+@media (max-width: 426px) {
+  .home-logo {
+    flex-direction: column;
+  }
+
+  .heroTitle {
+    font-size: 3.8rem;
+  }
+
+  .sphereIcon {
+    height: 28vh;
+  }
+
+  .hrIcon {
+    height: 34vh;
+  }
+
+  .heroSubtitle {
+    font-size: 1.4rem;
+    margin-left: 15px;
+
+  }
+}
+
+@media (max-width: 321px) {
+
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .sphereIcon {
+    height: 20vh;
+  }
+
+  .hrIcon {
+    height: 25vh;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+    margin-left: 25px;
+
+  }
 }
 
 
@@ -199,27 +248,6 @@ form select {
   padding: 0px !important;
 }
 
-#numberOne,
-#numberTwo {
-  height: 30px;
-}
-
-.active-page-number {
-  transform: scale(1.5);
-  transition: transform 1s ease-out;
-}
-
-.inactive-page-number {
-  transform: scale(1);
-  transition: transform 1s ease-out;
-}
-
-.linkContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .buttonIndex {
   background-color: #272727;
   color: #FFFAEE;
@@ -240,10 +268,6 @@ fieldset {
 
 legend {
   display: none;
-}
-
-.tableSize {
-  width: 100%;
 }
 
 .error {
@@ -411,4 +435,24 @@ legend {
 
   }
 }
+
+/***** TABLE *****/
+.tableContainer {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 60px 40px 60px;
+}
+
+.tableSize {
+  width: 100%;
+}
+
+.MuiDataGrid-main {
+  height: 400px;
+}
+
+
 

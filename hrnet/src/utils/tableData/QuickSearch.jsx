@@ -3,6 +3,7 @@ import IconButton from "@mui/material/IconButton";
 import ClearIcon from "@mui/icons-material/Clear";
 import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
+
 /**
  * @name QuickSearchToolbat
  * @description Create the search bar on the top of the table
@@ -21,12 +22,12 @@ export default function QuickSearchToolbar (props)
           variant="standard"
           value={props.value}
           onChange={props.onChange}
-          placeholder="Search…"
+          placeholder="Search employee…"
           InputProps={{
-            startAdornment: <SearchIcon fontSize="small" />,
+            startAdornment: <SearchIcon fontSize="medium" />,
             endAdornment: (
-              <IconButton title="Clear" aria-label="Clear" size="small" style={{ visibility: props.value ? "visible" : "hidden" }} onClick={props.clearSearch}>
-                <ClearIcon fontSize="small" />
+              <IconButton aria-label="Clear" title="Clear" size="medium" style={{ visibility: props.value ? "visible" : "hidden" }} onClick={props.clearSearch}>
+                <ClearIcon fontSize="medium" />
               </IconButton>
             )
           }}
@@ -36,14 +37,14 @@ export default function QuickSearchToolbar (props)
               xs: 1,
               sm: "auto"
             },
-            m: (theme) => theme.spacing(1, 0.5, 1.5),
+            m: (theme) => theme.spacing(1, 0.75, 1.5),
             "& .MuiSvgIcon-root": 
             {
               mr: 0.5
             },
             "& .MuiInput-underline:before": 
             {
-              borderBottom: 1,
+              borderBottom: 1.5,
               borderColor: "divider"
             }
           }}

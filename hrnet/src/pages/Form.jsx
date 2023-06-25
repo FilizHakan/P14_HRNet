@@ -92,27 +92,6 @@ export default function Form ()
 
                 <h2>Create Employee</h2>
 
-                <div className="linkContainer"> 
-                    <Link to="/employee-create-form">
-                        <img 
-                            id="numberOne" 
-                            className="active-page-number"
-                            alt="Page number" 
-                            src={numberOneDot}
-                        >
-                        </img>
-                    </Link>
-                    <Link to="/employee-list">
-                        <img 
-                            id="numberTwo" 
-                            className="inactive-page-number"
-                            alt="Page number" 
-                            src={numberTwoDot}
-                        >
-                        </img>
-                    </Link>
-                </div>
-
                 <div className="formContainer">
                     <form 
                         action="#" 

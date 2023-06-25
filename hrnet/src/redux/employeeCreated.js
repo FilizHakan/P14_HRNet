@@ -6,7 +6,7 @@ import {
 // Set the initial state
 const initialState = 
 {
-  data: false
+  data: false,
 }
 
 // Set the action

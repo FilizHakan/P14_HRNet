@@ -7,7 +7,7 @@ const store = configureStore
   reducer: 
   {
     employeeCreated: employeeCreatedReducer,
-    formData: formDataReducer
+    formData: formDataReducer,
   }
 });
 

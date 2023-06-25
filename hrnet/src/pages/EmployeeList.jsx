@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { formDataSelector } from "../redux/selector";
-import { Link } from "react-router-dom";
 
 import moment from "moment";
 
@@ -11,12 +10,10 @@ import escapeRegExp from "../utils/tableData/escapeRegExp";
 import QuickSearchToolbar from "../utils/tableData/QuickSearch";
 import Header from "../components/Header";
 import Loader from "../pages/Loader";
-
-import numberOneDot from "../assets/numberOneDot.png";
-import numberTwoDot from "../assets/numberTwoDot.png";
+import Footer from "../components/Footer";
 
 /**
- * @name List
+ * @name EmployeeList
  * @description create the page for the table caontaining the list of employees
  * @returns {JSX.Element}
  */
@@ -24,9 +21,7 @@ export default function EmployeeList()
 {
   const employeeInfo = useSelector(formDataSelector);
   const rows = [];
-  const rowsLength = employeeInfo.rows.length;
-  console.log(employeeInfo)
-  
+  const rowsLength = employeeInfo.rows.length;  
 
   // Which information will be filled up, regarding each row and column in the table
   for (let i = 0; i < rowsLength; i += 1) 
@@ -95,7 +90,7 @@ export default function EmployeeList()
     const [search, setSearch] = React.useState("");
     const [gridRows, setGridRows] = React.useState(rows);
   
-    const searchingRequest = (searchInfo) => 
+    const searchRequest = (searchInfo) => 
     {
       setSearch(searchInfo);
       const searchNewRegex = new RegExp(escapeRegExp(searchInfo), "i");
@@ -120,42 +115,23 @@ export default function EmployeeList()
         <Loader />
         <Header />
         <h2>Current Employees</h2>
-        <div className="linkContainer"> 
-            <Link to="/employee-create-form">
-                <img 
-                    id="numberOne" 
-                    className="inactive-page-number"
-                    alt="Page number" 
-                    src={numberOneDot}
-                >
-                </img>
-            </Link>
-            <Link to="/employee-list">
-                <img 
-                    id="numberTwo" 
-                    className="active-page-number"
-                    alt="Page number" 
-                    src={numberTwoDot}
-                >
-                </img>
-            </Link>
-        </div>
         <div id="table" className="tableContainer">
           <DataGrid
             className="tableSize"
             columns={gridColumns}
             rows={gridRows}
             slots={{ toolbar: QuickSearchToolbar }}
-            slotProps={{
+            slotProps={{ 
               toolbar: 
               {
                 value: search,
-                onChange: (event) => searchingRequest(event.target.value),
-                clearSearch: () => searchingRequest(" "),
+                onChange: (event) => searchRequest(event.target.value),
+                clearSearch: () => searchRequest(""),
               }
             }}
           />
         </div>
+        <Footer />
       </div>
     )
 };
