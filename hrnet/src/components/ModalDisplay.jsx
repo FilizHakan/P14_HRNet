@@ -5,11 +5,11 @@ import store from "../redux/store";
 import { employeeCreatedAction } from "../redux/employeeCreated";
 import { EmployeeCreatedSelector } from "../redux/selector";
 
-import Modal from "HRNet_universal_modal/dist/Modal";
-import "HRNet_universal_modal/dist/Modal.css";
+import Modal from "hrnet-modal/dist/Modal";
+import "hrnet-modal/dist/Modal.css";
 
 /**
- * @name ShowModal
+ * @name ModalDisplay
  * @description create modal component by using the "HRNet_universal_modal" react component
  * @returns {JSX.Element}
  */
