@@ -81,6 +81,7 @@ h2 {
 }
 
 .nav-logo {
+  width: auto;
   height: 350px;
   margin-top: -100px;
   margin-bottom: -140px;
@@ -487,14 +488,6 @@ legend {
 .customOverlay {
   color: #1a548e;
   z-index: 3000;
-}
-
-.css-1akuw9y-MuiDataGrid-overlayWrapperInner {
-  background-image: url(./assets/HRNetBlueLogoSphere.png);
-  background-repeat: no-repeat;
-  display: flex;
-  background-size: 15vh;
-  background-position: center 15%;
 }
 
 /*** Loader ***/
