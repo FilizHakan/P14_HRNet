@@ -3,7 +3,6 @@ import
 {   useState, 
     useEffect 
 } from "react";
-import { Link } from "react-router-dom";
 import store from "../redux/store";
 
 import departments from "../utils/departments";
@@ -12,7 +11,7 @@ import states from "../utils/states";
 import { employeeCreatedAction } from "../redux/employeeCreated";
 import { formDataAction } from "../redux/formData";
 
-//import ModalDisplay from "../components/ModalDisplay";
+import ModalDisplay from "../components/ModalDisplay";
 import Header from "../components/Header";
 import Loader from "./Loader";
 import Footer from "../components/Footer";
@@ -91,7 +90,7 @@ export default function Form ()
                         id="create-employee" 
                         onSubmit={onSubmit}
                     >
-                        <h2>Create Employee</h2>
+                        <h1>Create Employee</h1>
 
                         <label htmlFor="first-name">
                             <span>First Name</span>
@@ -219,6 +218,7 @@ export default function Form ()
                             Save
                         </button>
                     </form>
+                    <ModalDisplay />
                 </div>
             <Footer />
         </div>

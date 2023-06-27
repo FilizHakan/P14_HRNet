@@ -5,8 +5,8 @@ import store from "../redux/store";
 import { employeeCreatedAction } from "../redux/employeeCreated";
 import { EmployeeCreatedSelector } from "../redux/selector";
 
-import Modal from "hrnet-modal/dist/Modal";
-import "hrnet-modal/dist/Modal.css";
+import Modal from "hrnet_universal_modal/dist/Modal";
+import "hrnet_universal_modal/dist/Modal.css";
 
 /**
  * @name ModalDisplay
@@ -24,15 +24,18 @@ export default function ModalDisplay(isVisible)
   const isBigModalVisible = useSelector(EmployeeCreatedSelector).data;
 
   return (
-    <Modal
-      isVisible={isBigModalVisible} 
-      hide={hideBigModal} 
-      title="New employee" 
-      size="big"
-    >
-      <div className="modalBody">
-        You have successfully created your new employee's record.
-      </div>
-    </Modal>
+    <div>
+      <Modal
+        isVisible={isBigModalVisible} 
+        hide={hideBigModal} 
+        title="New employee" 
+        size="big"
+      >
+        <div className="modalBody">
+          You have successfully created your new employee's record.
+        </div>
+      </Modal>
+    </div>
+    
   )
 }

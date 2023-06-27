@@ -114,7 +114,7 @@ export default function Table()
       <div>
         <Loader />
         <Header />
-        <h2>Current Employees</h2>
+        <h1>Current Employees</h1>
         <div id="table" className="tableContainer">
           <DataGrid
             sx={{ borderColor: '#FFFAEE', borderRadius: '15px', boxShadow: '0 0 28px #1a548e' }}
