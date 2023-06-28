@@ -13,7 +13,6 @@ import { formDataAction } from "../redux/formData";
 
 import ModalDisplay from "../components/ModalDisplay";
 import Header from "../components/Header";
-import Loader from "./Loader";
 import Footer from "../components/Footer";
 
 /**
@@ -81,7 +80,6 @@ export default function Form ()
 
     return (
         <div>
-            <Loader />
             <Header />
             
                 <div className="formContainer">

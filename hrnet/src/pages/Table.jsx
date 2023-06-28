@@ -9,7 +9,6 @@ import { DataGrid } from "@mui/x-data-grid";
 import escapeRegExp from "../utils/tableData/escapeRegExp";
 import SearchToolbar from "../utils/tableData/SearchToolbar";
 import Header from "../components/Header";
-import Loader from "./Loader";
 import Footer from "../components/Footer";
 
 /**
@@ -112,7 +111,6 @@ export default function Table()
 
     return (
       <div>
-        <Loader />
         <Header />
         <h1>Current Employees</h1>
         <div id="table" className="tableContainer">

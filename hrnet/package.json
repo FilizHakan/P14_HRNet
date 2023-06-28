@@ -26,7 +26,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test-coverage": "react-scripts test --coverage --watchAll --no-cache",
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +47,13 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/FilizHakan/P14_HRNet.git"
+    }
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
